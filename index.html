@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio: Arun Kumar</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css"> -->
+
 
   <script src="https://unpkg.com/lodash@4.16.6"></script>
 
@@ -14,14 +16,184 @@
 
 <body>
   <div class="sidebar">
-    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
-    <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
-    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <div class="nav-head">
+      <!-- <div class="heading">
+        <div>&lt;</div>
+        <span>Arun Kumar</span>
+        <div>/&gt;</div> 
+      </div> -->
+    </div>
+    <div class="nav-options">
+      <a href="#home" id="home-nav"><i class="fa fa-fw fa-home"></i></a>
+      <a href="#skills" id="skills-nav"><i class="fa fa-fw fa-wrench"></i></a>
+      <a href="#clients" id="about-nav"><i class="fa fa-fw fa-briefcase"></i></a>
+      <a href="#work" id="work-nav"><i class="fa fa-fw fa-project-diagram"></i></a>
+      <a href="#contact" id="contact-nav"><i class="fa fa-fw fa-envelope"></i></a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/arunkumar191093/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/arunkumar191093" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:arunkumar191093@gmail.com" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+
   </div>
 
-  <div class="main">
-    <h2>Sidebar with Icons</h2>
+  <section class="main home-container" id="home">
+    <div class="home-content">
+      <div class="greet">Hi,</div>
+      <div class="name">I'm Arun</div>
+      <div class="greet-description">Here to share my experience of developing web and mobile applications with
+        Javascript / React / Vuejs / React Native
+        / Web Components and some other libraries and frameworks</div>
+    </div>
+    <div class="home-banner">
+      <img src="src/assets/main-banner.jpg" />
+    </div>
+  </section>
+
+  <section class="main" id="skills">
+    <div class="section-heading">My Skillset</div>
+    <div class="skills-container">
+      <div class="skills-banner">
+        <!-- <img src="src/assets/skills-banner.jpg" /> -->
+      </div>
+      <div class="skills-content">
+        <ul class="skills-list">
+          <li>Develop user interface/ front end for web & mobile applications</li>
+          <li>Develop native application using react-native</li>
+          <li>Third party integrations such as Codepush, Storybook</li>
+        </ul>
+        <div class="skill-icons">
+          <div><i class="fab fa-html5"></i><span>HTML5</span></div>
+          <div><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+          <div><i class="fab fa-js-square"></i><span>Javascript</span></div>
+          <div><i class="fab fa-react"></i><span>React</span></div>
+          <div><i class="fab fa-vuejs"></i><span>Vuejs</span></div>
+          <div><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+          <div><i class="fab fa-sass"></i><span>Sacss</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main experience-container" id="clients">
+    <div class="section-heading">Experiences</div>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h2>Zoomcar</h2>
+          <p>Sr. Software Engineer</p>
+          <p>Aug'19 - present</p>
+        </div>
+        <div class="content-details">
+          <div class="heading">Contributions: </div>
+          <ul class="responsibilities">
+            <li>Enhancing UI for desktop and mobile website of zoomcar</li>
+            <li>Developed features on admin app for e-scooters in react-native</li>
+            <li>Created UI kit to be used across the company</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Apttus Software Pvt. Ltd.</h2>
+          <p>Software Engineer</p>
+          <p>Jun'18 - Aug'19</p>
+        </div>
+        <div class="content-details">
+          <div class="heading">Contributions: </div>
+          <ul class="responsibilities">
+            <li>Developed an application that handles contract creation and calculation of benefits depending on
+              eligiblity of user</li>
+            <li>Developed admin page through which layout on pages of above application can be configured</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>Infosys Ltd.</h2>
+          <p>Sr. Systems Engineer</p>
+          <p>Aug'16 - May'18</p>
+        </div>
+        <div class="content-details">
+          <div class="heading">Contributions: </div>
+          <ul class="responsibilities">
+            <li>Worked on multiple projects such as AI Chat bot, stock management website for different clients </li>
+            <li>Created a plugin to introduce chat functionality in any website </li>
+            <li>Mentored team members on front end technologies </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main projects-container" id="work">
+    <div class="section-heading">Projects</div>
+    <div class="cards-container">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            Zoomcar
+          </div>
+          <div class="flip-card-back">
+            Test
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="main" id="contact">
+    <h2>Contact</h2>
     <p>This side navigation is of full height (100%) and always shown.</p>
     <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.
       Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint
@@ -29,8 +201,7 @@
     <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.
       Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint
       efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  </div>
-  <!-- <script src="./src/index.js"></script> -->
+  </section>
 </body>
 
 </html>
