@@ -450,6 +450,9 @@ html {
     margin: 0;
     height: auto;
   }
+  .section-heading{
+    font-size: 30px;
+  }
   .home-container {
     flex-direction: column;
     margin-top: 70px;
@@ -464,13 +467,25 @@ html {
         margin: 8px 0px;
       }
       .greet-description {
-        font-size: 26px;
+        font-size: 20px;
         margin: 8px 0px;
       }
     }
   }
-  .skills-container .skills-banner {
-    display: none;
+  .skills-container {
+    .skills-banner {
+      display: none;
+    }
+    .skills-content {
+      .skills-list {
+        li {
+          font-size: 18px !important;
+        }
+      }
+      .skill-icons div i {
+        font-size: 30px;
+      }
+    }
   }
   .experience-container {
     .container {
@@ -484,6 +499,9 @@ html {
             font-size: 12px;
           }
         }
+      }
+      &:not(:first-child){
+        opacity: 0.5;
       }
     }
   }
