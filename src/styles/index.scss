@@ -28,6 +28,7 @@ html {
     .heading {
       color: $white;
       text-align: center;
+      padding: 2px;
       .head-icon {
         i {
           font-size: 40px;
@@ -429,7 +430,7 @@ html {
     .nav-head {
       width: 20%;
       .heading .head-icon i {
-        font-size: 20px;
+        font-size: 30px;
       }
     }
     .nav-options {
