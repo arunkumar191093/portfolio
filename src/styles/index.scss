@@ -410,6 +410,21 @@ html {
   }
 }
 
+.resume-floating-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  a {
+    padding: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(#1a23b3, #5645d7, #0090ff);
+    i {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */
@@ -450,8 +465,9 @@ html {
     padding-left: 15px;
     margin: 0;
     height: auto;
+    padding-top: 60px;
   }
-  .section-heading{
+  .section-heading {
     font-size: 30px;
   }
   .home-container {
@@ -501,7 +517,7 @@ html {
           }
         }
       }
-      &:not(:first-child){
+      &:not(:first-child) {
         opacity: 0.5;
       }
     }
