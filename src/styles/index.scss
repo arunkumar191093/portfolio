@@ -3,6 +3,8 @@
 
 body {
   font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -51,6 +53,7 @@ html {
       justify-content: center;
       height: 50px;
 
+      &.active,
       &:hover {
         color: $white;
         font-size: 12px;
@@ -125,6 +128,10 @@ html {
       font-size: 28px;
       margin: 16px 0px;
       color: $lightgray;
+
+      .resume-msg{
+        padding-top: 16px;
+      }
     }
   }
   .home-banner {
@@ -132,6 +139,26 @@ html {
     img {
       max-width: 100%;
       height: auto;
+    }
+  }
+
+  .typography-img-container {
+    position: relative;
+    width: 50%;
+    height: 70vh;
+    background: #000;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+
+      &:nth-child(2) {
+        mix-blend-mode: multiply;
+      }
     }
   }
 }
@@ -232,6 +259,10 @@ html {
       }
     }
 
+    &:not(:first-child) {
+      opacity: 0.5;
+    }
+
     /* The circles on the timeline */
     &::after {
       content: "";
@@ -269,7 +300,7 @@ html {
     .content-details {
       position: absolute;
       top: 10px;
-      width: 78%;
+      width: 75%;
       height: 70%;
       opacity: 0;
       padding: 20px 30px;
@@ -412,16 +443,19 @@ html {
 
 .resume-floating-btn {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 60px;
+  right: 60px;
+
   a {
-    padding: 20px;
+    padding: 24px;
     border-radius: 50%;
     background-image: linear-gradient(#1a23b3, #5645d7, #0090ff);
     i {
       color: $white;
-      font-size: 16px;
+      font-size: 20px;
     }
+    transform: scale(1);
+    animation: pulse-animation 2s infinite;
   }
 }
 
@@ -517,9 +551,6 @@ html {
           }
         }
       }
-      &:not(:first-child) {
-        opacity: 0.5;
-      }
     }
   }
   .projects-container {
@@ -536,6 +567,17 @@ html {
     .my-info {
       .mobile {
         width: 50%;
+      }
+    }
+  }
+  .resume-floating-btn {
+    bottom: 40px;
+    right: 40px;
+
+    a {
+      padding: 20px;
+      i {
+        font-size: 16px;
       }
     }
   }

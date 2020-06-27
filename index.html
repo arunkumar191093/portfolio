@@ -8,10 +8,6 @@
   <title>Arun Kumar</title>
   <link rel="icon" href="./src/assets/autoprefixer-brands.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css"> -->
-
-
-  <script src="https://unpkg.com/lodash@4.16.6"></script>
 
 </head>
 
@@ -24,7 +20,7 @@
       </div>
     </div>
     <div class="nav-options">
-      <a href="#home" id="home-nav"><i class="fa fa-fw fa-home"></i></a>
+      <a href="#home" id="home-nav" class="active"><i class="fa fa-fw fa-home"></i></a>
       <a href="#skills" id="skills-nav"><i class="fa fa-fw fa-wrench"></i></a>
       <a href="#clients" id="about-nav"><i class="fa fa-fw fa-briefcase"></i></a>
       <a href="#work" id="work-nav"><i class="fa fa-fw fa-project-diagram"></i></a>
@@ -44,11 +40,17 @@
       <div class="name">I'm Arun</div>
       <div class="greet-description">Here to share my experience of developing web and mobile applications with
         Javascript / React / Vuejs / React Native
-        / Web Components and some other libraries and frameworks</div>
+        / Web Components and some other libraries and frameworks.
+        <div class="resume-msg">Wanna see my resume? Do click on the button in the bottom right corner</div>
+      </div>
     </div>
     <div class="home-banner">
       <img src="src/assets/main-banner.jpg" />
     </div>
+    <!-- <div class="typography-img-container">
+      <img src="/src/assets/face.jpg" />
+      <img src="/src/assets/text.jpg" />
+    </div> -->
   </section>
 
   <section class="main" id="skills">
@@ -133,7 +135,7 @@
         <div class="card-heading">Virtual Shop</div>
         <div class="card-content">
           <ul>
-            <li>Built the app from scratch (both front-end & API) using React-Native & MongoDB.</li>
+            <li>Built the app from scratch (both front-end & API) using React-Native, Nodejs & MongoDB.</li>
             <li>Integrated the app with <b>Codepush</b> for seamless deployments without even downloading apk again</li>
           </ul>
         </div>
@@ -154,6 +156,15 @@
             <li>Developed front-end for the chat-bot</li>
             <li>Built dynamic forms for chat-bot which were purely API driven</li>
             <li>Created a library to inject chatbot in any website</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-heading">TODO List chrome extension</div>
+        <div class="card-content">
+          <ul>
+            <li>Created this extension out of curiousity on how extensions works</li>
+            <li>Uses basic javascript and keeps the list items intact unless browser storage is cleared</li>
           </ul>
         </div>
       </div>
