@@ -129,7 +129,7 @@ html {
       margin: 16px 0px;
       color: $lightgray;
 
-      .resume-msg{
+      .resume-msg {
         padding-top: 16px;
       }
     }
@@ -214,158 +214,87 @@ html {
   }
 }
 .experience-container {
-  /* The actual timeline (the vertical ruler) */
-  .timeline {
-    position: relative;
-    margin: 0 auto;
-    max-width: 1200px;
-    // height: 680px;
-    // overflow: auto;
-  }
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ececec;
+      border-radius: 12px;
+      width: 33%;
+      margin: 0 12px;
+      overflow: hidden;
+      -webkit-box-shadow: 0px 2px 12px 0px #d0d0d0;
+      -moz-box-shadow: 0px 2px 12px 0px #d0d0d0;
+      box-shadow: 0px 2px 12px 0px #d0d0d0;
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .timeline::-webkit-scrollbar {
-    display: none;
-  }
+      .card-header {
+        width: 100%;
+        height: 7em;
+        position: relative;
+        text-align: center;
+        .company-name {
+          color: $white;
+        }
+        img {
+          width: 60px;
+          position: absolute;
+          border: 1px solid #e8e8e8;
+          border-radius: 20%;
+          left: 0;
+          right: 0;
+          top: 65px;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: white;
+          padding: 8px;
 
-  /* Hide scrollbar for IE and Edge */
-  .timeline {
-    -ms-overflow-style: none;
-  }
-
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    background-color: $white;
-    background-image: linear-gradient(rgba(26, 35, 179, 1), rgba(86, 69, 215, 1), rgba(0, 144, 255, 1));
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-
-  /* Container around content */
-  .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 43.2%;
-
-    &:hover {
-      .content-details {
-        opacity: 1;
+          &.apttus-logo {
+            width: 120px;
+            top: 90px;
+            border-radius: 10px;
+          }
+          &.infosys-logo {
+            width: 90px;
+            top: 90px;
+            border-radius: 10px;
+          }
+        }
       }
-    }
-
-    &:not(:first-child) {
-      opacity: 0.5;
-    }
-
-    /* The circles on the timeline */
-    &::after {
-      content: "";
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -17px;
-      background-color: white;
-      border: 4px solid #ff9f55;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    /* The actual content */
-    .content {
-      padding: 20px 30px;
-      background-color: white;
-      position: relative;
-      border-radius: 6px;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 1);
-      -moz-box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 1);
-      box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 1);
-
-      p {
-        color: $lightgray;
-        &:last-child {
-          font-style: italic;
+      .card-body {
+        padding: 16px;
+        margin-top: 16px;
+        .head-text {
+          text-align: center;
+          h2,
+          p {
+            margin: 0;
+            padding: 4px;
+          }
+          p {
+            color: $lightgray;
+            &:last-child {
+              font-style: italic;
+            }
+          }
+        }
+        .subtext {
+          .heading {
+          }
+          .responsibilities {
+            margin: 0;
+            padding: 0;
+            padding-left: 30px;
+            li {
+              font-size: 14px;
+              color: $lightgray;
+              padding: 4px 0px;
+            }
+          }
         }
       }
     }
-
-    .content-details {
-      position: absolute;
-      top: 10px;
-      width: 75%;
-      height: 70%;
-      opacity: 0;
-      padding: 20px 30px;
-      border-radius: 6px;
-      background-color: $white;
-      transition: opacity 0.6s;
-
-      .heading {
-        font-size: 16px;
-      }
-
-      .responsibilities {
-        margin: 0;
-        padding: 0;
-        padding-left: 30px;
-        li {
-          font-size: 14px;
-          color: $lightgray;
-          padding: 4px 0px;
-        }
-      }
-    }
-  }
-
-  /* Place the container to the left */
-  .left {
-    left: 0;
-  }
-
-  /* Place the container to the right */
-  .right {
-    left: 50%;
-  }
-
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
   }
 }
 
@@ -373,7 +302,6 @@ html {
   .cards-container {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
 
     .card-item {
       padding: 20px 30px;
@@ -539,19 +467,24 @@ html {
     }
   }
   .experience-container {
-    .container {
-      width: 75% !important;
-      .content-details {
-        padding: 8px !important;
-        width: 64% !important;
-        height: 80%;
-        .responsibilities {
-          li {
-            font-size: 12px;
-          }
-        }
-      }
+    .cards-container {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
     }
+    // .container {
+    //   width: 75% !important;
+    //   .content-details {
+    //     padding: 8px !important;
+    //     width: 64% !important;
+    //     height: 80%;
+    //     .responsibilities {
+    //       li {
+    //         font-size: 12px;
+    //       }
+    //     }
+    //   }
+    // }
   }
   .projects-container {
     .cards-container {
@@ -603,41 +536,15 @@ html {
   }
 
   .experience-container {
-    .timeline::after {
-      left: 31px;
-    }
-
-    /* Full-width containers */
-    .container {
-      width: 60%;
-      padding-left: 70px;
-      padding-right: 25px;
-      .content {
-        padding: 10px 30px;
+    height: auto;
+    .cards-container {
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      .card-wrapper{
+        width: 100%;
+        margin: 12px;
       }
-      .content-details {
-        width: 69%;
-        padding: 10px 30px;
-      }
-    }
-
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-      left: 60px;
-      border: medium solid white;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-      left: 15px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-      left: 0%;
     }
   }
 
