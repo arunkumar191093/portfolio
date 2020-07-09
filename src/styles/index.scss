@@ -468,8 +468,8 @@ html {
   .experience-container {
     .cards-container {
       flex-direction: column;
-      width: 80%;
-      margin: 0 auto;
+      width: 95%;
+      margin: 0;
     }
     // .container {
     //   width: 75% !important;
@@ -538,9 +538,9 @@ html {
     height: auto;
     .cards-container {
       flex-direction: column;
-      width: 80%;
-      margin: 0 auto;
-      .card-wrapper{
+      width: 95%;
+      margin: 0;
+      .card-wrapper {
         width: 100%;
         margin: 12px;
       }
