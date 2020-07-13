@@ -42,3 +42,12 @@ document.onscroll = () => {
 }
 
 onLoad();
+
+window.addEventListener('load', function () {
+  const loader = document.querySelector('#loader');
+  setTimeout(() => {
+    loader.classList.add('hide');
+  }, 800)
+
+  console.log('loaded')
+})
