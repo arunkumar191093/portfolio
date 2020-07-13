@@ -26,8 +26,9 @@ html {
 
   .nav-head {
     padding: 0px 0 8px;
-    background: #151a9a;
+    background: transparent;
     height: 60px;
+    display: none;
     .heading {
       color: $white;
       text-align: center;
@@ -48,6 +49,7 @@ html {
     }
   }
   .nav-options {
+    padding-top: 20px;
     a {
       padding: 8px;
       text-decoration: none;
@@ -426,6 +428,7 @@ html {
       display: flex;
       justify-content: space-evenly;
       width: 100%;
+      padding: 0;
       a {
         flex-direction: row;
         align-items: center;
