@@ -14,10 +14,13 @@ document.querySelector('.nav-options').addEventListener('click', (event) => {
 
 const setNavActive = (element) => {
   allOptions.forEach((item) => {
-    item.classList.remove('active');
+    if (item) {
+      item.classList.remove('active');
+    }
   })
-
-  element.classList.add('active');
+  if (element) {
+    element.classList.add('active');
+  }
 }
 
 const onLoad = () => {
@@ -46,7 +49,9 @@ onLoad();
 window.addEventListener('load', function () {
   const loader = document.querySelector('#loader');
   setTimeout(() => {
-    loader.classList.add('hide');
+    if (loader) {
+      loader.classList.add('hide');
+    }
   }, 800)
 
   console.log('loaded')

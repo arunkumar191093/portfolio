@@ -7,17 +7,18 @@ module.exports = {
   output: {
     filename: 'bundle.[contentHash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
+  mode: 'development',
   module: {
     rules: [
       {
         test: /\.(scss|css)$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader?sourceMap',
+        use: ['style-loader', 'css-loader',
           {
             loader: `postcss-loader`,
             options: {
-              options: {},
             }
           },
           {
